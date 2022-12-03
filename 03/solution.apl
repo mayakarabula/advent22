@@ -3,11 +3,9 @@ alphabet ← 'a' 'b' 'c' 'd' 'e' 'f' 'g' 'h' 'i' 'j' 'k' 'l' 'm' 'n' 'o' 'p' 'q'
 
 ⍝ STEP 1
 priority_sum ← 0
-priority ← { priority_sum +← ⍸alphabet=(∪ (((⍴⍵)÷2)↑⍵) ∩ (((⍴⍵)÷2)↓⍵)) }
-priority ¨ input
+{ priority_sum +← ⍸alphabet=(∪ (((⍴⍵)÷2)↑⍵) ∩ (((⍴⍵)÷2)↓⍵)) } ¨ input
 
 ⍝ STEP 2
 priority_sum ← 0
 groups ← 100 3⍴input
-priority2 ← { priority_sum +← ⍸alphabet=(∪⊃∩/groups[⍵;]) }
-priority2¨⍳100
+{ priority_sum +← ⍸alphabet=(∪⊃∩/groups[⍵;]) } ¨ ⍳100
