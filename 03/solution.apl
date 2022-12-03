@@ -11,7 +11,7 @@ priority ← {
 priority ¨ input
 
 ⍝ STEP 2
-
+priority_sum ← 0
 groups ← 100 3⍴input
 priority2 ← {
 	r ← ∪⊃∩/groups[⍵;]
