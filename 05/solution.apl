@@ -10,7 +10,7 @@ to ← {
     _to +← ⍵
 
     package ← ⌽_quantity↑(⊃dock[_from])
-    dock[_to] ← ⊂((⊂package),(⊃dock[_to]))
+    dock[_to] ← ⊂((package),(⊃dock[_to]))
     dock[_from] ← ⊂(-(⍴⊃dock[_from]) - _quantity)↑⊃dock[_from]
 
     _quantity -← _quantity
@@ -23,7 +23,7 @@ to ← {
     _to +← ⍵
 
     package ← _quantity↑(⊃dock[_from])
-    dock[_to] ← ⊂((⊂package),(⊃dock[_to]))
+    dock[_to] ← ⊂((package),(⊃dock[_to]))
     dock[_from] ← ⊂(-(⍴⊃dock[_from]) - _quantity)↑⊃dock[_from]
 
     _quantity -← _quantity
